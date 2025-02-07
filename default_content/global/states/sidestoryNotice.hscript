@@ -157,3 +157,7 @@ function leaveScene(){
         MusicBeatState.switchState(state);
 }
 
+function onStateCreatePost(){
+    addTouchPad("LEFT_FULL", "A_B");
+    addTouchPadCamera();
+}
