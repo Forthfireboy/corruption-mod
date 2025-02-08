@@ -334,7 +334,7 @@ function updateLang(){
 function inputShit(){
     if (!canSelect){return;}
 
-    if (FlxG.keys.justPressed.SPACE || FlxG.keys.justPressed.ENTER|| FlxG.keys.justPressed.Z){
+    if (FlxG.keys.justPressed.SPACE || FlxG.keys.justPressed.ENTER|| FlxG.keys.justPressed.Z || controls.ACCEPT){
         enterLang();
         canSelect = false;
         new FlxTimer().start(0.7, function(tmr){
@@ -343,13 +343,13 @@ function inputShit(){
         });
     }
 
-    if (FlxG.keys.justPressed.ESCAPE || FlxG.keys.justPressed.BACKSPACE|| FlxG.keys.justPressed.X){
+    if (FlxG.keys.justPressed.ESCAPE || FlxG.keys.justPressed.BACKSPACE|| FlxG.keys.justPressed.X || controls.BACK){
         backOut();
         canSelect = false;
         FlxG.sound.play(Paths.sound('cancelMenu'));
     }
 
-    if (FlxG.keys.justPressed.A || FlxG.keys.justPressed.LEFT)
+    if (FlxG.keys.justPressed.A || FlxG.keys.justPressed.LEFT || controls.UI_LEFT)
     {
         FlxG.sound.play(Paths.sound('scrollMenu'));
         curSelected -= 1;
@@ -359,7 +359,7 @@ function inputShit(){
         updateSelected();
     }
 
-    if (FlxG.keys.justPressed.RIGHT || FlxG.keys.justPressed.D)
+    if (FlxG.keys.justPressed.RIGHT || FlxG.keys.justPressed.D || controls.UI_RIGHT)
     {
         FlxG.sound.play(Paths.sound('scrollMenu'));
         curSelected += 1;
