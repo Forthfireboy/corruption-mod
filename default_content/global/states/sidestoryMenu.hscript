@@ -403,6 +403,12 @@ function enterLang(){ // language options
     updateLang();
 }
 
+function leaveScene(){
+    //musicPlayer.volume = 0;
+    var state = new HScriptState("softCodeMenu");
+    MusicBeatState.switchState(state);
+}
+
 function backOut(){
     FlxG.sound.play(Paths.sound('cancelMenu'));
     // back to main menu / title screen
@@ -522,8 +528,3 @@ function backToMain(){ // back to main section
     updateLang();
 }
 
-function leaveScene(){
-    //musicPlayer.volume = 0;
-    var state = new HScriptState("softCodeMenu");
-    MusicBeatState.switchState(state);
-}
