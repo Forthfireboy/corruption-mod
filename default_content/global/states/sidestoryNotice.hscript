@@ -57,7 +57,7 @@ function onUpdate(elapsed:Float){
 function inputShit(){
     if (!canSelect){return;}
 
-    if (FlxG.keys.justPressed.SPACE || FlxG.keys.justPressed.ENTER|| FlxG.keys.justPressed.Z){
+    if (FlxG.keys.justPressed.SPACE || FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.Z || controls.ACCEPT){
         canSelect = false;
         FlxG.sound.play(Paths.sound('confirmMenu'));
         
