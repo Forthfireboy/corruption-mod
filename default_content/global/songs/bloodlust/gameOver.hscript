@@ -94,7 +94,7 @@ function onUpdate(elapsed){
 
     if (!canLeave){return;}
 
-    if(FlxG.keys.pressed.SPACE||FlxG.keys.pressed.ESCAPE||FlxG.keys.pressed.ENTER||FlxG.keys.pressed.Z){
+    if(FlxG.keys.pressed.SPACE||FlxG.keys.pressed.ESCAPE||FlxG.keys.pressed.ENTER||FlxG.keys.pressed.Z || controls.ACCEPT){
         if (quickSwitch){
             canLeave = false;
             if (FlxG.sound.music != null){
@@ -235,4 +235,9 @@ function onResume(){
 function onDestroy(){
     if (video != null)
     video.destroy();
+}
+
+function onStateCreatePost(){
+    addTouchPad("NONE", "A");
+    addTouchPadCamera();
 }
