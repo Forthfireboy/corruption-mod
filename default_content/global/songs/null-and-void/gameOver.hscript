@@ -228,3 +228,8 @@ function onResume(){
 function onDestroy(){
     video.destroy();
 }
+
+function onStateCreatePost(){
+    addTouchPad("NONE", "A");
+    addTouchPadCamera();
+}
