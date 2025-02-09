@@ -158,6 +158,6 @@ function leaveScene(){
 }
 
 function onStateCreatePost(){
-    addTouchPad("LEFT_FULL", "A_B");
+    addTouchPad("NONE", "A");
     addTouchPadCamera();
 }
