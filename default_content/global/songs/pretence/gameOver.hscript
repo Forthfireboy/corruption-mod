@@ -155,3 +155,8 @@ function startAndEnd(){
     hasEnded = true;
     game.doGameOver();
 }
+
+function onStateCreatePost(){
+    addTouchPad("NONE", "A");
+    addTouchPadCamera();
+}
