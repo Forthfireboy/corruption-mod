@@ -359,7 +359,7 @@ function inputShit(){
         updateSelected();
     }
 
-    if (FlxG.keys.justPressed.RIGHT || FlxG.keys.justPressed.D || controls.UI_RIGHT)
+   else if (FlxG.keys.justPressed.RIGHT || FlxG.keys.justPressed.D || controls.UI_RIGHT)
     {
         FlxG.sound.play(Paths.sound('scrollMenu'));
         curSelected += 1;
