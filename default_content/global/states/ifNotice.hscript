@@ -105,7 +105,7 @@ function createInfoCard(infoText:String, subInfoText:String){
     infoCard.x = -1610;
     infoCard.alpha = 0;
     
-    addTouchPad("LEFT_RIGHT", "A_B");
+    addTouchPad("NONE", "A");
     addTouchPadCamera();
     
     moveTween = FlxTween.tween(infoCard,  {x: 0,alpha: 1}, 0.2, {ease: FlxEase.sineOut});
